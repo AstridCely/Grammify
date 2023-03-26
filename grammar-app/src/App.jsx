@@ -1,4 +1,6 @@
 import "./styles.css";
+import bot from "/public/assets/bot.svg";
+import send from "/public/assets/send.svg";
 import { useForm } from "./hooks/useForm";
 import { ChatStripe } from "./components/ChatStripe";
 import { v4 as uuidv4 } from "uuid";
@@ -91,7 +93,7 @@ function App() {
           <div className="wrapper ai">
             <div className="chat">
               <div className="profile">
-                <img src="/public/assets/bot.svg" alt="bot" />
+                <img src={bot} alt="bot" />
               </div>
               <div className="message" id={uuidv4()}>
                 ...
@@ -110,7 +112,7 @@ function App() {
           placeholder="Escribe aquí tu texto..."
         ></textarea>
         <button type="submit">
-          <img src={"/public/assets/send.svg"} />
+          <img src={send} />
         </button>
       </form>
     </>
